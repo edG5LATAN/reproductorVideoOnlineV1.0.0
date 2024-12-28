@@ -1,0 +1,14 @@
+.tabla_contenedor{
+  margin-top:15px ;
+  padding-top: 15px;
+}
+.tabla_contenedor table{
+  overflow-x: scroll;
+}
+.tabla_tr_img{
+  height: auto;
+  img{
+    width: 100px;
+    height: 100px;
+  }
+}

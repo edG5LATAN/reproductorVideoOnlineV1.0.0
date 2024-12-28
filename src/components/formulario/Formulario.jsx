@@ -2,7 +2,7 @@ import React from "react";
 
 function Formulario() {
   return (
-    <div className="container bg-danger">
+    <div className="container bg-body-tertiary rounded-3 border-secondary-subtle border p-5">
       <h2 className="text-center text-uppercase">
         Formulario de creacion nuevo
       </h2>

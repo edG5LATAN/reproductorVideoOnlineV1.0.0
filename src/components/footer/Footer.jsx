@@ -3,8 +3,8 @@ import './Footer.css'
 
 function Footer() {
   return (
-    <div className='footer text-center'>
-        <small className='p-1 fs-cursive'>Creado por EDTecnology.com</small>
+    <div className='footer text-center p-1 mb-0'>
+        <small className='fs-cursive'>Creado por EDTecnology.com</small>
     </div>
   )
 }

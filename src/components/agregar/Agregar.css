@@ -1,4 +1,5 @@
 .agregar_contenedor{
   padding-top: 100px;
   height: auto;
+  overflow: hidden;
 }
