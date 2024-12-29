@@ -1,0 +1,22 @@
+.categoria_contenedor{
+  padding-top: 70px;
+  padding-bottom: 50px;
+  form{
+    width: 50%;
+  }
+  ul{
+    h4{
+      text-transform: uppercase;
+    }
+    width: 50%;
+    margin-top: 20px;
+    padding: 9px;
+    border: 1px solid green;
+    li{
+      span:hover{
+        cursor: pointer;
+        transform: scale(1.15);
+      }
+    }
+  }
+}
