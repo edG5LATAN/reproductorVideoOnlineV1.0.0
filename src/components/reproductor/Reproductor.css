@@ -1,0 +1,16 @@
+.reproductor_video{
+   width: 1200px;
+   height: 600px;
+}
+@media (max-width:1000px) {
+  .reproductor_video{
+    width: 100%;
+    height: 400px;
+  }
+}
+@media (max-width:480px) {
+  .reproductor_video{
+    width: 100%;
+    height: 250px;
+  }
+}

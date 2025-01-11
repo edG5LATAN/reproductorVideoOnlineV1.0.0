@@ -1,0 +1,7 @@
+.listaVideo_video{
+  background-color: rgb(205, 222, 243);
+}
+.listaVideo_video:hover{
+  background-color: rgb(155, 172, 194);;
+  cursor: pointer;
+}

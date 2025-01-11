@@ -5,6 +5,7 @@ import Header from  './components/header/Header'
 import Footer from  './components/footer/Footer'
 import Agregar from './components/agregar/Agregar'
 import Categoria from './components/categoria/Categoria'
+import VerVideo from './components/verVideo/VerVideo'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/nuevo' element={<Agregar />} />
         <Route path='/categoria' element={<Categoria />} />
+        <Route path='/vervideo' element={<VerVideo />} />
       </Routes>
       <Footer />
      </BrowserRouter> 

@@ -1,5 +1,5 @@
 .categoria_contenedor{
-  padding-top: 70px;
+  padding-top: 100px;
   padding-bottom: 50px;
   form{
     width: 50%;
@@ -18,5 +18,9 @@
         transform: scale(1.15);
       }
     }
+    li:hover{
+      background-color: rgba(21, 214, 214, 0.5);
+    }
   }
 }
+  
