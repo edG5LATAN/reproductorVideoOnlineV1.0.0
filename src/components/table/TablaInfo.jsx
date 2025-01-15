@@ -33,20 +33,6 @@ function TablaInfo() {
             </td>
             <td>ANIME</td>
           </tr>
-
-          <tr className="text-center">
-            <th scope="row">1</th>
-            <td>samsung</td>
-            <td className="tabla_tr_img">
-              <img
-                src="https://m.media-amazon.com/images/M/MV5BNGVmY2ZmNTAtZGUzYy00OWI1LTg3NjEtOWEwNmNmMzE3NGEwXkEyXkFqcGc@._V1_.jpg"
-                class="img-thumbnail"
-                alt="imagen"
-              ></img>
-            </td>
-            <td>este es el ejemplo numero 1 de mi proyetci</td>
-            <td>ANIME</td>
-          </tr>
         </tbody>
       </table>
     </div>

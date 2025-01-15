@@ -22,31 +22,29 @@ function Categoria() {
           <label for="exampleInputImagen" className="form-label">
             Imagen
           </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleInputImagen"
-          />
+          <input type="text" className="form-control" id="exampleInputImagen" />
         </div>
-        <div className="mb-3">
-          <label for="exampleInputInformacion" className="form-label">
-            informacion
-          </label>
-          <input
-            type="text"
+        <div className="form-floating mb-3">
+          <textarea
+          style={{height:"100px"}}
             className="form-control"
-            id="exampleInputInformacion"
-          />
+            placeholder="ingresa tu informacion"
+            id="floatingTextarea"
+          ></textarea>
+          <label for="floatingTextarea">Informacion</label>
         </div>
-        <button type="button" class="btn btn-success">Crear</button>
+        <button type="button" className="btn btn-success">
+          Crear
+        </button>
       </form>
 
       <ul className="list-group container categoria_lista">
         {data.map((res, index) => {
           return (
-            <li 
-            key={index}
-            className="categoria_li mb-3 pb-3 list-group-item text-uppercase d-flex justify-content-between">
+            <li
+              key={index}
+              className="categoria_li mb-3 pb-3 list-group-item text-uppercase d-flex justify-content-between"
+            >
               {res}
               <span className="text-danger fw-bold icon-link-hover pointer:hover">
                 X

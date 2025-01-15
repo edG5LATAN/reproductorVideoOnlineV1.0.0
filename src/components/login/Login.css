@@ -1,0 +1,26 @@
+.login_contenedor{
+  margin-top: 100px;
+  min-height: 90vh;
+}
+.login_login_contenedor{
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid blueviolet;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.login1{
+  background-color: red;
+}
+
+@media (max-width:800px) {
+  .login_login_contenedor{
+    width: 80%;
+  }
+}
+@media (max-width:480px) {
+  .login_login_contenedor{
+    width: 98%;
+  }
+}

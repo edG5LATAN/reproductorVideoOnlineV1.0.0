@@ -31,36 +31,26 @@ function Formulario() {
             id="exampleInputPassword1"
           />
         </div>
-        <div className="mb-3">
-          <label for="exampleInputPassword1" className="form-label">
-            Detalles
-          </label>
-          <input
-            type="text"
+        <div className="form-floating mb-3">
+          <textarea
+          style={{height:"100px"}}
             className="form-control"
-            id="exampleInputPassword1"
-          />
+            placeholder="ingresa detalles de video"
+            id="floatingTextarea"
+          ></textarea>
+          <label for="floatingTextarea">Detalles</label>
         </div>
-        <select className="mb-3 form-select" aria-label="Default select example">
-          <option selected>Categoria</option>
-          <option value="JAVA">JAVA</option>
-          <option value="REACT">REACT</option>
-          <option value="ANIME">ANIME</option>
-        </select>
+        <div class="form-floating">
+  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+    <option selected>Open this select menu</option>
+    <option value="1">Categoria</option>
+    <option value="2">Backend</option>
+    <option value="3">Frontend</option>
+  </select>
+  <label for="floatingSelect">Works with selects</label>
+</div>
 
-        {/* <div className="mb-3 form-check">
-          <input
-            type="checkbox"
-            className="form-check-input"
-            id="exampleCheck1"
-          />
-          <label className="form-check-label" for="exampleCheck1">
-            Check me out
-          </label>
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button> */}
+       
       </form>
     </div>
   );
