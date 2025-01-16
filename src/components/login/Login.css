@@ -10,9 +10,14 @@
   border-radius: 10px;
   overflow: hidden;
 }
-.login1{
-  background-color: red;
+.login{
+  opacity: 0.4;
 }
+.login:hover{
+  background-color: rgba(34, 83, 158, 0.596);
+  opacity: 1;
+}
+
 
 @media (max-width:800px) {
   .login_login_contenedor{
