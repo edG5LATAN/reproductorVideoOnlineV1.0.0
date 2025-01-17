@@ -1,0 +1,7 @@
+.borrar_contenedor{
+  margin-top: 100px;
+}
+.borrar_tabla_tbody>tr:hover{
+  cursor: pointer;
+  background-color: green;
+}

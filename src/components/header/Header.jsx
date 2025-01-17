@@ -49,14 +49,14 @@ function Header() {
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="#">
-                    Borrar
-                  </a>
+                <Link to={"/borrar"} className="dropdown-item">
+                Borrar
+              </Link>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
-                    Aserca d
-                  </a>
+                <Link to={"/acercade"} className="dropdown-item">
+                Acerca de
+              </Link>
                 </li>
                 <li>
                   <hr />
