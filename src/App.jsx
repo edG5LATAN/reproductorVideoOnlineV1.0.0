@@ -14,7 +14,7 @@ import AsercaDe from "./components/asercaDe/AsercaDe.jsx";
 
 function App() {
   
-  const [user,setuser]=useState({nombre:"edwin",clave:"1234"})
+  const [user,setuser]=useState()
 
   
   return (

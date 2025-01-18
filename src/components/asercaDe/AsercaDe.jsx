@@ -2,7 +2,10 @@ import React from "react";
 
 function AsercaDe() {
   return (
-    <div className="container d-grid align-items-center align-content-center" style={{ marginTop: "100px",minHeight:"100vh" }}>
+    <div
+      className="container d-grid align-items-center align-content-center"
+      style={{ marginTop: "100px", minHeight: "100vh" }}
+    >
       <h1 className="text-uppercase text-center">acerca de proyecto</h1>
       <p className="text-danger-emphasis font-monospace">
         Este proyecto fue desarrollado para poder crear un reproductor de videos
@@ -15,12 +18,24 @@ function AsercaDe() {
         Bootstrap para su visualizacion.
         <br />
         Para su Back-End se utilizo SpringBoot de JAVA con ayuda de
-        Spring-Security, Axios y de Cors se creara una
-        autencticacion con JWT y Bcrypt para la seguridad para su base de datos
-        usamos Mysql lastimosamente hay pocas paginas de despliegue que permitan
-        usar una base de datos gratuita por lo que se tendra que usar en
-        desarrollo con su informacion de Database.
+        Spring-Security, Axios y de Cors se creara una autencticacion con JWT y
+        Bcrypt para la seguridad para su base de datos usamos Mysql
+        lastimosamente hay pocas paginas de despliegue que permitan usar una
+        base de datos gratuita por lo que se tendra que usar en desarrollo con
+        su informacion de Database.
       </p>
+
+      <div className="text-center mt-5">
+        <p className="text-danger-emphasis font-monospace">
+          para ver mas proyectos ingresa a mi Linkedin<br/>
+          <a 
+          className="text-decoration-none"
+          target="_blank"
+          href="https://www.linkedin.com/in/edwin-castro-13a763272">
+            EDTecnology
+          </a>
+        </p>
+      </div>
     </div>
   );
 }

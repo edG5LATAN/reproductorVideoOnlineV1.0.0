@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <nav class="navbar navbar-expand-lg bg-success-subtle fixed-top">
       <div class="container-fluid">
           <a class="nav-link text-primary disabled" aria-disabled="true">
             EDTecnology.com
@@ -61,10 +61,10 @@ function Header() {
                 <li>
                   <hr />
                 </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Informacion
-                  </a>
+                <li className="m-2">
+                  <button className="btn btn-danger">
+                    Log-Out
+                  </button>
                 </li>
               </ul>
             </li>
