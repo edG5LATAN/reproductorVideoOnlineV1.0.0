@@ -1,7 +1,7 @@
 import React from "react";
 import "./Table.css";
 
-function TablaInfo() {
+function TablaInfo({data}) {
   return (
     <div className="tabla_contenedor d-flex justify-content-center align-items-center">
       <table className="rounded-3 p-3 table table-dark table-striped container" >
@@ -17,22 +17,47 @@ function TablaInfo() {
           </tr>
         </thead>
         <tbody>
-          <tr className="text-center">
-            <th scope="row">2</th>
-            <td>nokia</td>
+          {
+            data==[]
+            ?
+            <tr className="text-center">
+            <th scope="row">0</th>
+            <td>espera</td>
             <td className="tabla_tr_img">
               <img
-                src="https://i.pinimg.com/originals/21/92/1a/21921acb7222dfc5a347ed1bfeae5da5.jpg"
+                src="https://png.pngtree.com/png-vector/20191118/ourmid/pngtree-loading-logo-design-circle-loading-illustration-on-white-background-png-image_1996461.jpg"
                 class="img-thumbnail"
                 alt="imagen"
               ></img>
             </td>
             <td>
-              prueba numero 18 de informacion asd asd a sda sd as da sd asdas
-              dasd asd asd asd asd asd
+              cargando...
             </td>
-            <td>ANIME</td>
+            <td>cargando...</td>
           </tr>
+          :
+          <>
+           {
+            data.map((res,index)=>{
+              return<tr key={index} className="text-center">
+              <th scope="row">2</th>
+              <td>{res.titulo}</td>
+              <td className="tabla_tr_img">
+                <img
+                  src={res.imagen}
+                  class="img-thumbnail"
+                  alt="imagen"
+                ></img>
+              </td>
+              <td>
+                {res.detalles}
+              </td>
+              <td>{res.categoria}</td>
+            </tr>
+            })
+           }
+          </>
+          }
         </tbody>
       </table>
     </div>

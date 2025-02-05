@@ -1,24 +1,21 @@
-import React from 'react'
-import './Reproductor.css'
+import React, { useContext } from "react";
+import "./Reproductor.css";
+import { Contexto } from "../../contexto/Contexto";
+import ReactPlayer from "react-player";
 
 function Reproductor() {
+  const { video } = useContext(Contexto);
+
   return (
     <div className="reproductor_video mb-5">
-        <p>video numero 3</p>
-       
-        <iframe
-          width="100%"
-          height="100%"
-          className="iframe_video"
-          src="https://www.youtube.com/embed/I5exsScaHWo?si=XV88UenV8sUjaX1Y"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </div>
-  )
+      <ReactPlayer 
+      width="100%"
+      height="100%"
+      className="iframe_video" 
+      controls
+      url={video} />
+    </div>
+  );
 }
 
-export default Reproductor
+export default Reproductor;

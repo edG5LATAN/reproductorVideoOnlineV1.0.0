@@ -27,6 +27,14 @@ function AsercaDe() {
 
       <div className="text-center mt-5">
         <p className="text-danger-emphasis font-monospace">
+          Si deseas ver mas de los iconos para tus proyectos consulta su repo de <a 
+           className="text-decoration-none"
+           href="https://github.com/tandpfun/skill-icons#readme" 
+           target="_blank">
+             GitHub
+           </a>
+        </p>
+        <p className="text-danger-emphasis font-monospace">
           para ver mas proyectos ingresa a mi Linkedin<br/>
           <a 
           className="text-decoration-none"

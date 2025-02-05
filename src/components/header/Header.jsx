@@ -1,16 +1,37 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Contexto } from "../../contexto/Contexto";
 
 function Header() {
+
+  const navig= useNavigate()
+
+  const {setlogin}=useContext(Contexto)
+  const [titulo,settitulo]=useState("")
+
+  const cerrarCession=()=>{
+     setlogin(false)
+  }
+
+  const enviarBusquedaVideo=()=>{
+    if(titulo==""){
+      return
+    }else{
+     navig(`/busqueda/${titulo}`)
+    settitulo("") 
+    }
+    
+  }
+
   return (
-    <nav class="navbar navbar-expand-lg bg-success-subtle fixed-top">
-      <div class="container-fluid">
-          <a class="nav-link text-primary disabled" aria-disabled="true">
+    <nav  className="header_contenedor navbar navbar-expand-lg  fixed-top">
+      <div className="container-fluid">
+          <a className="nav-link text-white disabled" aria-disabled="true">
             EDTecnology.com
           </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -18,28 +39,28 @@ function Header() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link to={"/home"} className="nav-link" aria-current="page" href="#">
                 Home
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link to={"/nuevo"} className="nav-link">
                 Agregar
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link to={"/categoria"} className="nav-link">
                 Crear Categoria
               </Link>
             </li>
-            <li class="nav-item dropdown">
+            <li className="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -47,7 +68,7 @@ function Header() {
               >
                 Opciones
               </a>
-              <ul class="dropdown-menu">
+              <ul className="dropdown-menu">
                 <li>
                 <Link to={"/borrar"} className="dropdown-item">
                 Borrar
@@ -62,24 +83,29 @@ function Header() {
                   <hr />
                 </li>
                 <li className="m-2">
-                  <button className="btn btn-danger">
+                  <button onClick={cerrarCession} className="btn btn-danger">
                     Log-Out
                   </button>
                 </li>
               </ul>
             </li>
           </ul>
-          <form class="d-flex" role="search">
+          <div className="d-flex" role="search">
             <input
-              class="form-control me-2"
+              className="form-control me-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
+              value={titulo}
+              onChange={(e)=>settitulo(e.target.value)}
             />
-            <button class="btn btn-outline-success" type="submit">
+            <button
+            onClick={()=>enviarBusquedaVideo()} 
+            className="btn btn-outline-success" 
+            type="button">
               Search
             </button>
-          </form>
+          </div>
         </div>
       </div>
     </nav>

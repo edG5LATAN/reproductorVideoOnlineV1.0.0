@@ -1,4 +1,4 @@
-.pagina{
-    color: gold;
-    font-size: 14px;
+.header_contenedor{
+    background: rgb(80,155,173);
+    background: radial-gradient(circle, rgba(80,155,173,0.9805194805194806) 100%, rgba(189,253,45,0.900974025974026) 100%);   
 }
