@@ -1,7 +1,7 @@
 import axios from "axios"
 
 
-const dtbase="http://localhost:8080/"
+const dtbase=import.meta.env.VITE_APP_API;
 
 export const getAllVideosPorUsuario = (setVideos,user) => {
   try {
@@ -24,31 +24,33 @@ export const getCategorias = (setdata,user) => {
   }
 }
 
-export const loginLoguearse = (usuario, clave, setlogin, setuser) => {  
+export const loginLoguearse = (loguser, logclave, setlogin, setuser) => {  
   axios.post(dtbase+"usuario/login", {
-      usuario: usuario,
-      clave: clave
+      usuario: loguser,
+      clave: logclave
     })
       .then(response => {
         if(response.data===true){
           setlogin(true)
-          setuser(usuario)
+          setuser(loguser)
         }else{
           return
         }
       })
       .catch(error => {
-        alert('Error en el login', error);
+        // alert('Error en el login', error);
       });
 }
 
-export const crearNuevo = (data) => {
+export const crearNuevo = (data,setlogueado,setmsj) => {
     axios.post(dtbase + "usuario/crear", data)
     .then(response=>{
-      alert("se creo correctamente "+response.status)
+      setlogueado(true)
+      setmsj("se creo correctamente")
     })
     .catch(error=>{
-      alert("no se creo error de login"+ error)
+      setlogueado(false)
+      setmsj("usuario ya existe")
     })
   
 }
